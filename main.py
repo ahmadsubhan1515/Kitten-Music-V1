@@ -19,9 +19,11 @@ HOST     = config.get("dashboard_host", "0.0.0.0")
 # Using discord.py-self (selfbot library) — no Intents class, self_bot=True
 class SelfMusicBot(commands.Bot):
     def __init__(self):
+        intents = discord.Intents.default()
         super().__init__(
             command_prefix=PREFIX,
-            self_bot=True
+            self_bot=True,
+            intents=intents  # type: ignore
         )
         self.start_time = None
         self.songs_played = 0
