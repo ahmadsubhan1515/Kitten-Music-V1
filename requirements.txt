@@ -1,0 +1,6 @@
+discord.py-self
+wavelink
+PyNaCl
+quart
+quart-cors
+python-dotenv
